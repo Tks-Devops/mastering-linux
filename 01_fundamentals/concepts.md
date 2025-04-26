@@ -91,10 +91,103 @@ done
         
     
     • Uses of cat command ?
-      
+    
+     cat(conkatinant):-the cat cmd is one of the universal tools, yet all it does is copy standard input to standrd output.
+        cat--->1. tac
+           ----->2.copy file
+            ------->3. create a single file
+             --------->4. for see the file content with out open 
+     
+        example:-a. cat >file1
+                    what is this?
+                    how are you ?
+                    ctrl+d --------------->in this method you can write using cat followed by ">"{filename]
+                 b. cat file1
+                    what is this?
+                    how are you ?--------->for see the file content with out open 
+                 c. cat >file2
+                    namaste---ctrl+d ---->lets create a file for conkatinant
+                 d.cat >>file1
+                   thankyou -->ctrl+d --->add some content inside file1 
+                 e. cat file1
+                    what is this
+                    how are you ?
+                    thankyou----------->check the file content 
+                 f. cat file1 file2 >file4------->this cmd will help to merge file1+file2 
+                 g. cat file4
+                    what is this
+                    how are you ?
+                    thankyou
+                    namaste------------->successfully merged and reflect in file4
+                 h.cat file1 >file2------->this cmd will help to override the copy
+
+  
     • Shell script execution methods (sh, ./)
+    
+       this transaction will do two type one is {sh -followed by file name } another method is {./ followed by file name .}   but if you do this transaction you will get a error like permission denied . Bcoz Linux have the security that who have execute the file and otherwise authorize will given permission to execute the file .
+      CH mod command changes file permissions in Linux
+     So before exucute the file we need give the executable permission / granting permission.
+    Chmod cmd will use for given the permissions.
+    Chmod ----->           Ch ---→ for change and mod --→ granting permission.
+
+
+
+
     • chmod for permission: chmod 777, what 7 = rwx
+  
+     4 no will belongs to --→ Read 
+     2 no will belongs to → Write 
+     1 no will belongs to --→ execute 
+    example:-1. chmod 777 first-shell-script.sh  # Read, Write, Execute for all
+           2. chmod 444 file  # Read-only for all
+          "7" in the sense 4+2+1=7 based on result of sum of the 4+2+1 permisson will granting like
+            4+2=6--->read+write permission given by the dir/file .
+      
+        user/owner--->4+2+1=7
+        , group ,---->4+2+1=7
+            other ---->4+2+1 =7---------------->based on work admin will set the permission
+
     • history to view previous commands
+     
+     history  # View previously used commands / all day what cmd used you can track it.
+          example:-you are very lazy to type cmd again and agin so use history and copy cmd run it .
+
+
+
     • Basic commands: pwd, cd, mkdir, ls, touch
+     
+     cd  cmd basically use to entry to inside the directory as well as exit from the directory.
+      pwd  name itself describe his definition i.e. present working directory. Where you are currently available?
+
+    Creating files and folders in Linux using commands
+      mkdir  this cmd used for creating directory. 
+      ls--->verify the directry how much file is present
+     
     • Writing simple scripts to automate folder/file creation
-    • Adding metadata at the top of scripts (author, date, version)
+     
+     nano sample-shell-script.sh
+    #!/bin/bash
+    #create a folder 
+    mkdir tk
+
+    #create two files 
+    cd tk
+    touch firstfile secondfile
+    ctrl+x -press “y” enter
+   
+     • Adding metadata at the top of scripts (author, date, version)
+      
+       Metadata Header
+#!/bin/bash
+# Author: TK
+# Date: 01.12.2025
+# Version: v1
+# Purpose: Node health check
+
+#create a folder 
+    mkdir tk
+#create two files 
+    cd tk
+    touch firstfile secondfile
+    ctrl+x -press “y” enter
+
