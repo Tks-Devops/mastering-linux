@@ -213,7 +213,7 @@ bash
 # Author: TK
 # Date: 01.12.2025
 # Version: v1
-# Purpose: Node health check
+# Purpose: example of shell scripting
 
 bash
 
@@ -227,5 +227,5 @@ touch firstfile secondfile
 Code
 
 
-This Markdown version is now well-structured and easy to read. Let me know if further adjustments are needed!
+
 
